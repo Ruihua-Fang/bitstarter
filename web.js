@@ -8,7 +8,7 @@ var msg = fs.readFile('index.html', function (err, data) {
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  response.send("test");
+  response.send(msg);
 });
 
 var port = process.env.PORT || 5000;
